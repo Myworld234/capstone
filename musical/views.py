@@ -20,6 +20,16 @@ def home(request):
     
 #intro function
 def intro(request):
+    """This function will be used to Render **intro.html** webpage. 
+    *If: User is signed in pass current user to rendered webpage 
+    Else: Just render*
+
+        :param any request: HTTP-REQUEST
+
+        :returns: Render HTML Webpage
+
+        :rtype: HTTP-RESPONSE
+    """
     if request.user.is_authenticated:
         current_user = request.user
         return render(request, 'intro.html', {'current_user': current_user})
