@@ -38,6 +38,16 @@ def intro(request):
     
 #about function
 def about(request):
+    """This function will be used to Render **about.html** webpage. 
+    *If: User is signed in pass current user to rendered webpage 
+    Else: Just render*
+
+        :param any request: HTTP-REQUEST
+
+        :returns: Render HTML Webpage
+
+        :rtype: HTTP-RESPONSE
+    """
     if request.user.is_authenticated:
         current_user = request.user
         return render(request, 'about.html', {'current_user': current_user})
