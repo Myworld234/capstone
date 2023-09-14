@@ -1,0 +1,29 @@
+<!--Fetch_Layout File-->
+{% extends 'shared-capstone/base.html' %}
+
+<!--Set_Layout Application Name-->
+{% block app_name %}
+<!--Form Bootstrap SVG Icon-->
+Welcome Back, {{ firstname }}
+{% endblock %}
+
+<!--Set_Layout Page Title-->
+{% block title %}User Account{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row g-2">
+        <div class="col">
+            <p class="fs-3 mb-0">First & Last Name</p>
+            <p class="fs-4 ms-0">{{ firstname }} {{ lastname }}</p>
+        </div>
+        <div class="col">
+            <p class="fs-3 mb-0">Email Address</p>
+            <p class="fs-4 ms-0">{{ email }}</p>
+        </div>     
+        <div class="col">
+            <a href="#0" class="btn btn-outline-danger">Delete Account</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

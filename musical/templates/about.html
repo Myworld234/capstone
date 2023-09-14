@@ -1,0 +1,48 @@
+{% extends 'shared/base.html' %}
+    
+{% load static %}
+
+{% block app_name %}Musical{% endblock %}
+
+{% block title %}About - Musical{% endblock %}
+
+{% block webpage_heading %}About - Shingwain Entertainment{% endblock %}
+
+
+{% block content %}
+<div class="row g-2">
+    <!--Title-->
+    <div class="col-md-3 col-12 p-2">
+        <img src="{% static 'shingwain/2.jpg' %}" class="img-fluid rounded">
+    </div>
+    <div class="col p-2">
+        {% if user.is_authenticated %}
+            <h1 class="text-white ms-1">Welcome Back, {{ current_user.first_name }}</h1>
+            <p class="lead fs-3 ms-3">What would you like to do today?</p>
+        {% else %}
+            <h1 class="text-white">Please Login or Sign Up!</h1>
+            <p class="lead fs-3 ms-3"><em>You must be a user before proceed with Musical...</em></p> 
+            <a href="{% url 'users:user_login' %}">Login</a>
+            <a href="{% url 'users:user_add' %}">Sign Up</a>           
+        {% endif %}
+        <p class="fs-5 fw-normal">
+            ABOUT SHINGWAIN ENTERTAINER.
+        </p>
+    </div>
+    <hr>
+    <div class="col p-2">
+    </div>
+    Seun Iyiola(born 28 of June 1993), known professionally as Shigwain Entertainer, is a Nigerian jùjú singer, songwriter and multi-instrumentalist.He is regarded as one of the celestial African pop musicians to gain international success, and has been called one of the influential musicians in celestian of all time.
+
+Seun Iyiola formed his own backing band in 2011,eventually known as his African Beats. After achieving national success in Nigeria during the 1970s and founding his own independent label, Sunny Adé signed to Island Records in 1982 and achieved international success with the albums Juju Music (1982) and Synchro System (1983); the latter garnered him a Grammy nomination, a first for a Nigerian artist. His 1998 album Odu also garnered a Grammy nomination. Sunny Adé currently serves as chairperson of the Musical Copyright Society of Nigeria.
+
+Early life
+Seun Iyiola was born in Lagos to a christain family, His mother was a church organist, who we call iya woli of the celestia church. 
+
+Career
+Seun Iyiola left secondary school in Lagos under the pretense of going to the University of Lagos. It was thus in Lagos that his eclectic musical career began.
+
+Seun Iyiola musical sound has evolved from the early days. His career began with alot of struggles from one church concert to another in the celestial church over the years, for various reasons ranging from changes in his music to schooling concerns, seun travel from one state to another in pursue for is music and school carrier. 
+
+</div>
+{% endblock %}

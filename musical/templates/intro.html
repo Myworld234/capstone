@@ -1,0 +1,49 @@
+{% extends 'shared/base.html' %}
+    
+<!--Static Folder Served Directly(client)-->    
+{% load static %}
+
+{% block app_name %}Musical{% endblock %}
+
+{% block title %}Intro - Musical{% endblock %}
+
+{% block webpage_heading %}Intro - Shingwain Entertainment{% endblock %}
+
+{% block content %}
+<div class="row g-2">
+    <!--Title-->
+    <div class="col-md-3">
+        <img src="{% static 'shingwain/1.jpg' %}" class="img-fluid rounded">
+    </div>
+
+    <div class="col p-2">
+        <h1 class="text-white ms-1">SHINGWAIN ENTERTAINMENT </h1>
+        <p class="fs-3 ms-3">SHINGWAIN ENTERTAINMENT JUJU JOURNEY</p>
+        <p class="lead fs-3 ms-3">
+          Juju music is a vibrant and influential genre that originates from Nigeria, particularly from the Yoruba people of southwestern Nigeria. It's known for its rhythmic complexity, melodic richness, and its ability to incorporate various musical elements from both traditional and modern sources. Here are some key characteristics and aspects of juju music:
+          
+          Instruments and Sound: Juju music prominently features the use of electric guitars, talking drums, keyboard synthesizers, and various percussion instruments. The combination of these instruments creates a distinctive sound that blends traditional African rhythms with modern musical elements.
+          
+          Lyrics and Language: Juju songs are often sung in a mixture of Yoruba, English, and sometimes other local languages. The lyrics can cover a wide range of topics, including love, social issues, folklore, and philosophical themes. Some juju musicians also incorporate Yoruba proverbs and cultural references into their lyrics.
+          
+          Rhythms and Dance: Juju music is known for its infectious and danceable rhythms. The interplay between the different drum patterns and the call-and-response interactions between instruments and vocals create an energetic and lively atmosphere. The dance associated with juju music is characterized by rhythmic movements and gestures.
+          
+          Evolution and Styles: Juju music has evolved over the years, incorporating elements from different genres such as highlife, gospel, funk, and even reggae. It went through various stylistic phases, from its early roots in traditional Yoruba music to its modern form influenced by international pop and rock music.
+          
+          Prominent Artists: Several juju music artists have achieved international recognition. One of the most famous figures is King Sunny Adé, who played a crucial role in popularizing juju music on the global stage. Other notable artists include Ebenezer Obey, Sir Shina Peters, and Chief Commander Ebenezer Obey.
+          
+          Social and Cultural Impact: Juju music often reflects the social and political climate of Nigeria. Some songs address issues such as poverty, corruption, and the challenges faced by the society. The music has also played a role in preserving Yoruba cultural heritage and maintaining a connection with traditional rhythms and melodies.
+          
+          Performance and Live Shows: Juju music is best experienced live. Performances can be elaborate and lengthy, often featuring extended instrumental sections and audience participation. The musicians' interactions with the audience create a sense of community and engagement.
+          
+          Global Influence: While juju music has its roots in Nigeria, its influence has spread beyond West Africa. Its fusion of African and modern elements has inspired musicians around the world, contributing to the development of world music and influencing genres like Afrobeat and highlife.
+          
+          Overall, juju music is a dynamic and evolving genre that continues to captivate audiences with its rhythm, energy, and cultural significance. It's not only a musical genre but also a reflection of the rich history and diverse traditions of Nigeria and the Yoruba people.</p>
+        
+
+    </div>
+
+
+    
+</div>
+{% endblock %}

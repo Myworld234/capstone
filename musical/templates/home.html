@@ -1,0 +1,54 @@
+{% extends 'shared/base.html' %}
+    
+{% load static %}
+
+{% block app_name %}Musical{% endblock %}
+
+{% block title %}Home - Musical{% endblock %}
+
+{% block webpage_heading %}Home - Shingwain Entertainment{% endblock %}
+
+{% block content %}
+<div class="row g-2">
+    <!--Title-->
+    <div class="col-md-3 col-12 p-2">
+        <img src="{% static 'shingwain/3.jpg' %}" class="img-fluid rounded">
+    </div>
+    <div class="col p-2">
+        {% if user.is_authenticated %}
+            <h1 class="text-white ms-1">Welcome Back, {{ current_user.first_name }}</h1>
+            <p class="lead fs-3 ms-3">What would you like to do today?</p>
+        {% else %}
+            <h1 class="text-white">Please Login or Sign Up!</h1>
+            <p class="lead fs-3 ms-3"><em>You must be a user before proceed with Musical...</em></p>
+            <a href="{% url 'users:user_login' %}">Login</a>
+            <a href="{% url 'users:user_add' %}">Sign Up</a>
+        {% endif %}        
+        <p class="fs-5 fw-normal">
+                ABOUT SHINGWAIN AFROBEAT JOURNEY.
+            </p>
+        </div>
+        <hr>
+        <div class="col p-2">
+        </div>
+        Afrobeat is a genre of music that originated in Nigeria and was pioneered by the legendary musician Fela Kuti. Afrobeat is characterized by its unique fusion of various musical styles, including traditional African rhythms, jazz, funk, highlife, and more. Here's a deeper look into the characteristics and significance of Afrobeat:
+
+Fela Kuti and Origin: Afrobeat was created by Fela Kuti in the late 1960s and early 1970s. Fela was a multi-instrumentalist, composer, and political activist. He aimed to use music as a platform for addressing social and political issues and promoting social change.
+
+Musical Elements: Afrobeat is characterized by its polyrhythmic percussion, prominent bass lines, and horn sections. The music often features extended instrumental solos and intricate arrangements. It seamlessly blends traditional African rhythms with modern genres like jazz and funk.
+
+Lyrics and Message: Fela Kuti's lyrics were heavily infused with political and social commentary. He fearlessly criticized government corruption, social injustice, and other issues affecting Nigeria and Africa as a whole. His music became a powerful medium for raising awareness and advocating for change.
+
+Influence and Legacy: Fela Kuti's impact on music and culture is immense. His Afrobeat style inspired not only musicians but also activists and thinkers. He created a genre that was both musically innovative and socially conscious.
+
+Global Spread: While Afrobeat had its origins in Nigeria, it gained international recognition and influence. Artists from around the world have drawn inspiration from Afrobeat's rhythms and message, and the genre has been fused with various other styles in different parts of the world.
+
+Contemporary Afrobeat: In recent years, contemporary artists have taken Afrobeat in new directions, blending it with modern genres like hip-hop, electronic music, and pop. Artists like Burna Boy, Wizkid, and Davido have helped bring Afrobeat to a global audience while maintaining its African roots.
+
+Afrobeat vs. Afrobeat (with an 's'): It's important to note that there's also a term called "Afrobeats" (with an 's'), which refers to a modern genre that emerged from African popular music, particularly in West Africa. Afrobeats features a mix of African rhythms, hip-hop, dancehall, and electronic music.
+
+Live Performances: Much like juju music, Afrobeat is known for its dynamic live performances. Fela Kuti's shows were legendary for their length, with performances often lasting for hours and featuring extended instrumental improvisations.
+
+In summary, Afrobeat is not just a musical genre; it's a cultural movement that uses music as a tool for social change and awareness. Fela Kuti's pioneering work laid the foundation for a genre that continues to evolve, influence, and inspire musicians and listeners around the world.</p>
+</div>
+{% endblock %}
